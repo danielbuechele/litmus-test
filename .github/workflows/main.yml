@@ -1,9 +1,8 @@
 name: Litmus Storybook
 on: [push]
 jobs:
-  litmus-storybook:
-    runs-on:
-      group: Temporal-Github
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - name: Setup Node.js
