@@ -1,0 +1,16 @@
+name: Litmus Storybook
+on: [push]
+jobs:
+  litmus-storybook:
+    runs-on:
+      group: Temporal-Github
+    steps:
+      - uses: actions/checkout@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+      - name: Install dependencies
+        run: npm install --force
+      - name: Run Litmus Storybook Tests
+        run: npx litmus-cli --version
